@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Đang mở Pi Browser...</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { font-family: sans-serif; text-align: center; padding: 50px; }
+    h1 { color: #6a1b9a; }
+  </style>
+  <script>
+    // Gọi deep link Pi Browser
+    window.onload = function() {
+      // Thay "yourdomain.com" bằng domain của bạn
+      window.location.href = "pibrowser://pinet-money.com/";
+      // Fallback sau 2 giây nếu không mở được
+      setTimeout(function(){
+        window.location.href = "https://pinet-money.com";
+      }, 2000);
+    };
+  </script>
+</head>
+<body>
+  <h1>Đang mở trang trong Pi Browser...</h1>
+  <p>Nếu không tự mở, <a href="pibrowser://pinet-money.com">bấm vào đây</a></p>
+</body>
+</html>
